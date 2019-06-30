@@ -28,7 +28,7 @@ USER ${USER}
 RUN echo -e '\033[36;1m ******* SELECT WORKING SPACE ******** \033[0m'
 WORKDIR /usr/share/nginx/html
 
-RUN echo -e '\033[36;1m ******* INSTALL SITE WEB ******** \033[0m'
+RUN echo -e '\033[36;1m ******* ADD SITE WEB ******** \033[0m'
 COPY . /usr/share/nginx/html
 
 RUN echo -e '\033[36;1m ******* OPENING PORTS ******** \033[0m'
