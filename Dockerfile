@@ -1,6 +1,6 @@
 FROM nginx:stable
 
-MAINTAINER https://www.oda-alexandre.com/
+LABEL authors="https://www.oda-alexandre.com/"
 
 ENV USER www
 ENV PORTS 80
