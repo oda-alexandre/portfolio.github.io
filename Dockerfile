@@ -7,7 +7,7 @@ ENV PORTS 80
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
-apt-get update && apt-get install -y --no-install-recommends \
+apt update && apt install -y --no-install-recommends \
 sudo
 
 RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
