@@ -1,6 +1,6 @@
 FROM nginx:stable
 
-LABEL authors https://www.oda-alexandre.com/
+LABEL authors https://www.oda-alexandre.com
 
 ENV USER www
 ENV HOME /home/${USER}
