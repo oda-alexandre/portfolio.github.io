@@ -117,8 +117,7 @@ test_app:
   script:
     - echo -e '\033[36;1m ******* TEST APP ******** \033[0m'
     - docker build -t ${CI_PROJECT_NAME} .
-    - docker run --rm -d ${CI_PROJECT_NAME}
-        -p 80:80
+    - docker run --rm -d -p 80:80 ${CI_PROJECT_NAME}
     - sleep 30
     - curl http://localhost:80
   only:
