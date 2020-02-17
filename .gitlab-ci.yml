@@ -119,7 +119,7 @@ test_app:
     - docker build -t ${CI_PROJECT_NAME} .
     - docker run --rm -d -p 8080:80 ${CI_PROJECT_NAME}
     - sleep 30
-    - curl http://localhost:80
+    - curl http://localhost:8080
   only:
     - dev
 
