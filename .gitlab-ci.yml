@@ -112,10 +112,15 @@ license_management:
 test_app:
   stage: test
   allow_failure: false
+  before_script:
+    - apk add --update curl && rm -rf /var/cache/apk/*
   script:
     - echo -e '\033[36;1m ******* TEST APP ******** \033[0m'
     - docker build -t ${CI_PROJECT_NAME} .
-    - docker run --rm ${CI_PROJECT_NAME}
+    - docker run --rm -d ${CI_PROJECT_NAME}
+        -p 80:80
+    - sleep 30
+    - curl http://localhost:80
   only:
     - dev
 
